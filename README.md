@@ -26,10 +26,10 @@ Endpoints:
     "priorityId":"p3",
     "due_date":"2020-12-22"
    }
-   </pre><br>
-  Response: 
-  <pre> 
-  {
+   </pre>
+   Response: 
+   <pre> 
+   {
     "id" : 1,
     "name":"Task1",
     "statusId":"s3",
@@ -41,7 +41,22 @@ Endpoints:
 2. Get Task by Id:<br>
    Method: GET<br>
    Request URL:  http://127.0.0.1:8000/tasks/1 <br>
-   Response: Task corresponding to the id provided
+   Response:
+   <pre>
+   {
+    "data": {
+        "id": 1,
+        "created_at": "2020-11-19T13:48:56.000000Z",
+        "updated_at": "2020-11-21T16:17:39.000000Z",
+        "due_date": "2020-12-01",
+        "name": "updated Task",
+        "priorityId": "p1",
+        "statusId": "s1",
+        "deleted": 0
+    },
+    "status": 200
+   }
+   </pre>
    
 3. Fetch all tasks: 
    Method: GET
