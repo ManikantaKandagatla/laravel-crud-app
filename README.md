@@ -9,7 +9,7 @@ New things learnt:
 
 How to configure:
 1. Clone the repository
-2. Run <pre> php artisan migrate </pre> to install the schema needed for application
+2. Run <pre> php artisan --install --seed</pre> to install the schema needed for application and seed some data
 3. Run <pre> php artisan serve </pre> to start the application
 
 Endpoints: 
@@ -19,13 +19,22 @@ Endpoints:
    Request Payload: 
    <pre>
    {
-    "name":"olddate",
+    "name":"Task1",
     "statusId":"s3",
     "priorityId":"p3",
-    "due_date":"2020-10-22"
+    "due_date":"2020-12-22"
    }
    </pre><br>
-  Response: Task with id in json
+  Response: 
+  <pre> 
+  {
+    "id" : 1,
+    "name":"Task1",
+    "statusId":"s3",
+    "priorityId":"p3",
+    "due_date":"2020-12-22"
+   }
+   </pre>
   
 2. Get Task by Id:<br>
    Method: GET<br>
