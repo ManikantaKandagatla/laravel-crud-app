@@ -1,7 +1,9 @@
 A simple crud to learn the flow in Laravel framework
 
 Entities:
-Task
+1. Task
+2. Status
+3. Priority
 
 New things learnt:
 1. Middleware - Request Interceptor
