@@ -14,20 +14,22 @@ How to configure:
 
 Endpoints: 
 1. Add tasks: 
-   Method: POST
-   Request URL: http://127.0.0.1:8000/tasks 
+   Method: POST<br>
+   Request URL: http://127.0.0.1:8000/tasks <br>
    Request Payload: 
+   <pre>
    {
     "name":"olddate",
     "statusId":"s3",
     "priorityId":"p3",
     "due_date":"2020-10-22"
    }
+   </pre><br>
   Response: Task with id in json
   
-2. Get Task by Id:
-   Method: GET
-   Request URL:  http://127.0.0.1:8000/tasks/1 
+2. Get Task by Id:<br>
+   Method: GET<br>
+   Request URL:  http://127.0.0.1:8000/tasks/1 <br>
    Response: Task corresponding to the id provided
    
 3. Fetch all tasks: 
@@ -36,27 +38,32 @@ Endpoints:
    Response: All the tasks in the DB
 
 4. Fetch tasks with basic filters: 
-   Method: GET
-   Endpoint: http://127.0.0.1:8000/tasks?from=2020-11-01&to=2020-12-31&pageNumber=2&limit=5
-   Response: All the tasks retrieved for the filter provided
+   Method: GET<br>
+   Endpoint: http://127.0.0.1:8000/tasks?from=2020-11-01&to=2020-12-31&pageNumber=2&limit=5<br>
+   Response: All the tasks retrieved for the filter provided<br>
 
-5. Update a Task: 
-   Method: PUT
-   Request payload: 
+5. Update a Task: <br>
+   Method: PUT<br>
+   Request payload: <br>
+   <pre>
    {
        "id":1,
        "due_date":"2020-10-01",
        "name":"updated Task"
    }
+   </pre>
    Response: Task with updated data
 
 6. Group data with column with counts: 
    Method: POST
    Request Payload: 
+   <pre>
    {
       "column": "due_date"
    }
+   </pre>
    Response: 
+   <pre>
    {
     "data": [
         {
@@ -82,6 +89,7 @@ Endpoints:
     ],
     "status": 200
    }
+   </pre>
    
    
    
